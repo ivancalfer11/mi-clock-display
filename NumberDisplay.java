@@ -8,22 +8,19 @@
 public class NumberDisplay
 {
     // instance variables - replace the example below with your own
-    private int horas;
-    private int min;
-    private int limitHoras;
-    private int limitMin;
+    private int value;
+    private int limit;
+    
 
     /**
      * Constructor for objects of class NumberDisplay
      */
-    public NumberDisplay(int limitHoras, int limitMin)
+    public NumberDisplay(int rollOverLimit)
     {    
-        if(horas > limitHoras){
-           horas= 00; 
-        }
-        if(min > limitMin){
-            min = 00;
-        }
+        value = 00;
+        limit = rollOverLimit;
+        
+        
         
     }
 
@@ -33,31 +30,41 @@ public class NumberDisplay
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void setValue(int valorHoras, int valorMin)
+    public void setValue(int valorActual)
     {
-        // put your code here
-        horas = valorHoras;
-        min = valorMin;
-        
+        value = valorActual;
     }
     public String getDisplayValue()
     {
-        String cadenaADevolver = " ";
-        cadenaADevolver = horas + " : " + min;
-        return cadenaADevolver;
+      String cadenaADevolver = " "; 
+        if(value < 10) 
+      {
+        cadenaADevolver = "0" + value;
+          return cadenaADevolver;
+      }
+      else 
+      {
+        cadenaADevolver = ""+ value;
+          return cadenaADevolver;
+      }
+    } 
+    public int getValue()
+    {
+        return value;
     }
     public void increment()
     {
-        min = min + 1;
-        if (min > limitMin)
+        value = value + 1;
+        if(value > limit)
         {
-            min = 00;
-            horas = horas + 1;
-            if(horas > limitHoras)
-            {
-                horas = 00;
-            }
+            value = 0;
         }
     }
+    public int getLimit()
+    {
+        return limit;
+    }
+   }
+    
         
-}
+

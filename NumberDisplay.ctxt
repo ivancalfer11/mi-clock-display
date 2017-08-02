@@ -1,14 +1,18 @@
 #BlueJ class context
 comment0.target=NumberDisplay
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ NumberDisplay\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=limitHoras\ limitMin
-comment1.target=NumberDisplay(int,\ int)
+comment1.params=rollOverLimit
+comment1.target=NumberDisplay(int)
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ NumberDisplay\r\n
-comment2.params=valorHoras\ valorMin
-comment2.target=void\ setValue(int,\ int)
+comment2.params=valorActual
+comment2.target=void\ setValue(int)
 comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
 comment3.params=
 comment3.target=java.lang.String\ getDisplayValue()
 comment4.params=
-comment4.target=void\ increment()
-numComments=5
+comment4.target=int\ getValue()
+comment5.params=
+comment5.target=void\ increment()
+comment6.params=
+comment6.target=int\ getLimit()
+numComments=7
